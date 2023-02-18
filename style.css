@@ -165,11 +165,14 @@ img {
 /* responsiveness */
 @media (max-width: 600px) {
     body{
-        background-color: #fff;
+        height: 100vh;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .wrapper{
         width: 100vw;
-        height: 100vh;
         margin: 0;
         border-radius: 0;
     }

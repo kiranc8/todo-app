@@ -7,7 +7,7 @@
 
 body {
     height: 100vh;
-    background: url('/assets/forest-g1e9aabb4b_1920.jpg');
+    background: url('assets/forest-g1e9aabb4b_1920.jpg');
     display: flex;
     justify-content: center;
     align-items: center;

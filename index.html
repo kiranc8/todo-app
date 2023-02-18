@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Todo</title>
+</head>
+
+<body>
+  <!-- Beginning of the wrapper section -->
+  <div class="wrapper">
+    <div class="task-input">
+      <img class="menu-icon" src="assets/menu.png" alt="icon" />
+      <input type="text" placeholder="Add a new task" />
+      <img class="add-btn" src="assets/add.png" alt="icon" />
+    </div>
+    <div class="controls">
+      <div class="filters">
+        <span id="all" class="active">All</span>
+        <span id="pending" >pending</span>
+        <span id="completed">completed</span>
+      </div>
+      <button onclick="deleteAllTask()" class="clear-btn">Clear All</button>
+    </div>
+    <!-- Beginning of task list section -->
+    <ul class="task-box"></ul>
+    <!-- End of task list section -->
+    <div class="task-count">
+        <p id="all" class="active">Total Tasks</p>
+    </div>
+    
+  </div>
+  <!-- End of the wrapper section -->
+  <script src="script.js"></script>
+</body>
+
+</html>

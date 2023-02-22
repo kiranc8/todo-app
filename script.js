@@ -16,6 +16,8 @@ filters.forEach((btn) => {
   });
 });
 
+addButton.addEventListener('click',addTask);
+
 // function which shows todo list
 function showTodo(filter) {
   let li = "";
@@ -76,6 +78,18 @@ function updateStatus(selectedTask) {
   localStorage.setItem("todo-list", JSON.stringify(todos));
 }
 
+function addTask() {
+  userTask = taskInput.value.trim();
+  taskInput.value = "";
+  let taskInfo = { name: userTask, status: "pending" };
+  todos.push(taskInfo); //adding new task to todos
+  localStorage.setItem("todo-list", JSON.stringify(todos));
+  localStorage.setItem("total-task", todos.length);
+  document.querySelector("#all").classList.add("active");
+  document.querySelector("#completed").classList.remove("active");
+  document.querySelector("#pending").classList.remove("active");
+  showTodo("all");
+}
 //takes input and added in todos array and local storage
 taskInput.addEventListener("keyup", (e) => {
   let userTask = taskInput.value.trim();
